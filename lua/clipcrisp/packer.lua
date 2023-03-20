@@ -55,14 +55,18 @@ return require('packer').startup(function(use)
     }
 
     use {"akinsho/toggleterm.nvim", tag = '*', config = function()
-        require("toggleterm").setup()
+        require("toggleterm").setup{
+        }
     end}
 
     use {
         "folke/trouble.nvim",
         requires = "nvim-tree/nvim-web-devicons",
         config = function()
-            require("trouble").setup()
+            require("trouble").setup{
+            }
         end
     }
+
+    use 'puremourning/vimspector'
 end)

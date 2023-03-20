@@ -1,1 +1,2 @@
-vim.keymap.set("n", "<leader>to", vim.cmd.TodoTrouble)
+vim.keymap.set("n", "<leader>to", vim.cmd.TodoLocList)
+
