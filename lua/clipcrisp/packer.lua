@@ -79,9 +79,6 @@ return require('packer').startup(function(use)
 
     use({
         "jackMort/ChatGPT.nvim",
-        config = function()
-            require("chatgpt").setup()
-        end,
         requires = {
             "MunifTanjim/nui.nvim",
             "nvim-lua/plenary.nvim",
