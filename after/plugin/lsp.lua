@@ -1,17 +1,9 @@
-local lsp = require('lsp-zero')
+local lsp = require('lsp-zero').preset({})
 
-lsp.preset("recommended")
-
-lsp.ensure_installed({
-	'rust_analyzer',
-})
-
-lsp.set_preferences({
-	sign_icons = { }
-})
-
-
-
-lsp.nvim_workspace()
+lsp.on_attach(function(client, bufnr)
+    -- see :help lsp-zero-keybindings
+    -- to learn the available actions
+    lsp.default_keymaps({buffer = bufnr})
+end)
 
 lsp.setup()
